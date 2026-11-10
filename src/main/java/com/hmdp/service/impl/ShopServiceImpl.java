@@ -227,7 +227,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
             return Result.ok(Collections.emptyList());
         }
         List<GeoResult<RedisGeoCommands.GeoLocation<String>>> content = results.getContent();
-        if (content.size()<from){
+        if (content.size()<=from){
             //没有下一页
             return Result.ok();
         }
